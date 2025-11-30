@@ -11,23 +11,40 @@ import aiBg from '../assets/ai-jump.jpg';
 
 const Home = () => {
     const { t, i18n } = useTranslation();
+
+    // Define available backgrounds and their credits
+    const backgrounds = [
+        { img: heroBg, creditKey: 'Shelby Bauman' },
+        { img: brandingBg, creditKey: 'Alexandre Barbosa' },
+        { img: socialBg, creditKey: 'Leo_Visions' },
+        { img: aiBg, creditKey: 'Than Tibbetts' }
+    ];
+
+    // State for randomized backgrounds
+    const [randomizedBgs, setRandomizedBgs] = useState([]);
     const [currentBg, setCurrentBg] = useState(heroBg);
+
     // Initial credit based on current language
     const [currentCredit, setCurrentCredit] = useState(t('home.photoCredit', { author: 'Shelby Bauman', source: 'Unsplash' }));
     const containerRef = useRef(null);
 
-    // Update credit when language changes if we are on the hero section
+    // Randomize backgrounds on mount
     useEffect(() => {
-        if (currentBg === heroBg) {
-            setCurrentCredit(t('home.photoCredit', { author: 'Shelby Bauman', source: 'Unsplash' }));
-        } else if (currentBg === brandingBg) {
-            setCurrentCredit(t('home.photoCredit', { author: 'Alexandre Barbosa', source: 'Unsplash' }));
-        } else if (currentBg === socialBg) {
-            setCurrentCredit(t('home.photoCredit', { author: 'Leo_Visions', source: 'Unsplash' }));
-        } else if (currentBg === aiBg) {
-            setCurrentCredit(t('home.photoCredit', { author: 'Than Tibbetts', source: 'Unsplash' }));
+        const shuffled = [...backgrounds].sort(() => 0.5 - Math.random());
+        setRandomizedBgs(shuffled);
+        setCurrentBg(shuffled[0].img);
+        setCurrentCredit(t('home.photoCredit', { author: shuffled[0].creditKey, source: 'Unsplash' }));
+    }, []);
+
+    // Update credit when language changes
+    useEffect(() => {
+        if (randomizedBgs.length > 0) {
+            const currentBgObj = randomizedBgs.find(bg => bg.img === currentBg);
+            if (currentBgObj) {
+                setCurrentCredit(t('home.photoCredit', { author: currentBgObj.creditKey, source: 'Unsplash' }));
+            }
         }
-    }, [i18n.language, currentBg, t]);
+    }, [i18n.language, currentBg, t, randomizedBgs]);
 
     useEffect(() => {
         const handleKeyDown = (e) => {
@@ -57,6 +74,8 @@ const Home = () => {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, []);
 
+    if (randomizedBgs.length === 0) return null; // Wait for randomization
+
     return (
         <>
             <BackgroundTransition image={currentBg} credit={currentCredit} />
@@ -74,8 +93,8 @@ const Home = () => {
                 }}
             >
                 <Hero onActivate={() => {
-                    setCurrentBg(heroBg);
-                    setCurrentCredit(t('home.photoCredit', { author: 'Shelby Bauman', source: 'Unsplash' }));
+                    setCurrentBg(randomizedBgs[0].img);
+                    setCurrentCredit(t('home.photoCredit', { author: randomizedBgs[0].creditKey, source: 'Unsplash' }));
                 }} />
 
                 <FullScreenSection
@@ -84,8 +103,8 @@ const Home = () => {
                     align="left"
                     linkTo="/services"
                     onActivate={() => {
-                        setCurrentBg(brandingBg);
-                        setCurrentCredit(t('home.photoCredit', { author: 'Alexandre Barbosa', source: 'Unsplash' }));
+                        setCurrentBg(randomizedBgs[1].img);
+                        setCurrentCredit(t('home.photoCredit', { author: randomizedBgs[1].creditKey, source: 'Unsplash' }));
                     }}
                 />
 
@@ -95,8 +114,8 @@ const Home = () => {
                     align="right"
                     linkTo="/services"
                     onActivate={() => {
-                        setCurrentBg(socialBg);
-                        setCurrentCredit(t('home.photoCredit', { author: 'Leo_Visions', source: 'Unsplash' }));
+                        setCurrentBg(randomizedBgs[2].img);
+                        setCurrentCredit(t('home.photoCredit', { author: randomizedBgs[2].creditKey, source: 'Unsplash' }));
                     }}
                 />
 
@@ -106,8 +125,8 @@ const Home = () => {
                     align="left"
                     linkTo="/services"
                     onActivate={() => {
-                        setCurrentBg(aiBg);
-                        setCurrentCredit(t('home.photoCredit', { author: 'Than Tibbetts', source: 'Unsplash' }));
+                        setCurrentBg(randomizedBgs[3].img);
+                        setCurrentCredit(t('home.photoCredit', { author: randomizedBgs[3].creditKey, source: 'Unsplash' }));
                     }}
                 />
             </div>
