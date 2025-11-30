@@ -1,0 +1,84 @@
+:root {
+  --font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  /* Trampoleen Palette */
+  --color-dark-blue: #2b2d42;
+  --color-grey-blue: #8d99ae;
+  --color-light-grey: #edf2f4;
+  --color-red: #ef233c;
+  --color-dark-red: #d90429;
+
+  --color-bg: var(--color-dark-blue);
+  --color-text: var(--color-light-grey);
+  --color-primary: var(--color-red);
+  --color-secondary: var(--color-grey-blue);
+
+  /* Fluid Typography */
+  --font-size-h1: clamp(2rem, 4vw + 1rem, 3.5rem);
+  --font-size-h2: clamp(1.5rem, 3vw + 1rem, 2.5rem);
+  --font-size-h3: clamp(1.2rem, 2vw + 1rem, 2rem);
+  --font-size-service-title: clamp(1.3rem, 2.5vw + 0.5rem, 2.2rem);
+  --font-size-body: clamp(0.9rem, 1.5vw, 1.1rem);
+
+  /* Spacing */
+  --spacing-container: clamp(1rem, 5vw, 4rem);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Responsive Utilities */
+.container {
+  padding: 0 var(--spacing-container);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hidden-mobile {
+  display: none;
+}
+
+.hidden-desktop {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .hidden-mobile {
+    display: flex;
+  }
+
+  .hidden-desktop {
+    display: none;
+  }
+}
+
+/* Glassmorphism Utility */
+.glass-panel {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 8px;
+}

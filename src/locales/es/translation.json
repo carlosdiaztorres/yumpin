@@ -1,0 +1,67 @@
+{
+    "header": {
+        "home": "Inicio",
+        "services": "Servicios",
+        "about": "Nosotros",
+        "customers": "Clientes",
+        "contact": "Contacto"
+    },
+    "home": {
+        "welcome": "Bienvenido a Yumpin.com",
+        "subtitle": "Agencia creativa y de acompañamiento digital.",
+        "heroTitle": "Impulsa tu presencia digital",
+        "heroSubtitle": "Ayudamos a creadores y negocios a profesionalizar su marca con creatividad e innovación.",
+        "cta": "¡Yump!",
+        "photoCredit": "Foto de {{author}} en {{source}}"
+    },
+    "about": {
+        "title": "No caminamos, saltamos.",
+        "subtitle": "En un mundo digital saturado, destacar requiere impulso. Yumpin es el trampolín para creadores y marcas listos para llegar más alto.",
+        "mission": {
+            "title": "Nuestra Misión",
+            "desc": "Profesionalizar el talento. Transformamos la creatividad en impacto medible mediante estrategia y tecnología."
+        },
+        "values": {
+            "elevation": {
+                "title": "Elevación",
+                "desc": "No nos conformamos con lo estándar. Buscamos siempre el siguiente nivel de calidad."
+            },
+            "momentum": {
+                "title": "Impulso",
+                "desc": "La inercia es enemiga del crecimiento. Mantenemos tu marca en constante movimiento."
+            },
+            "precision": {
+                "title": "Precisión",
+                "desc": "Estrategias guiadas por IA, curadas por humanos. El equilibrio perfecto."
+            }
+        }
+    },
+    "services": {
+        "branding": "Identidad de marca",
+        "social": "Redes sociales",
+        "ai": "Integración de IA",
+        "digital_accompaniment": {
+            "title": "Acompañamiento digital",
+            "desc": "Estrategia de crecimiento, gestión de contenidos, revisión de perfiles y seguimiento personalizado."
+        },
+        "brand_image": {
+            "title": "Imagen de marca / Branding",
+            "desc": "Creación de identidad visual, paleta de colores, tipografías, logotipos y libro de estilo."
+        },
+        "social_promotion": {
+            "title": "Promoción en redes",
+            "desc": "Planificación de campañas, gestión de publicaciones y análisis de resultados."
+        },
+        "content_creation": {
+            "title": "Creación de contenido",
+            "desc": "Fotografía, vídeo, edición, creatividad y guion para redes sociales."
+        },
+        "ai_implementation": {
+            "title": "Implementación de IA",
+            "desc": "Auditoría de procesos, propuestas de automatización e integración de herramientas de IA."
+        }
+    },
+    "footer": {
+        "rights": "© 2025 Yumpin.com"
+    }
+}

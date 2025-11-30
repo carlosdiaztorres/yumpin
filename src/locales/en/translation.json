@@ -1,0 +1,67 @@
+{
+    "header": {
+        "home": "Home",
+        "services": "Services",
+        "about": "About",
+        "customers": "Customers",
+        "contact": "Contact"
+    },
+    "home": {
+        "welcome": "Welcome to Yumpin.com",
+        "subtitle": "Creative agency and digital accompaniment.",
+        "heroTitle": "Elevate your digital presence",
+        "heroSubtitle": "We help creators and businesses professionalize their brand with creativity and AI innovation.",
+        "cta": "Yump!",
+        "photoCredit": "Photo by {{author}} on {{source}}"
+    },
+    "about": {
+        "title": "We don't just walk, we jump.",
+        "subtitle": "In a crowded digital world, standing out requires momentum. Yumpin is the springboard for creators and brands ready to go higher.",
+        "mission": {
+            "title": "Our Mission",
+            "desc": "Professionalizing talent. We transform creativity into measurable impact through strategy and technology."
+        },
+        "values": {
+            "elevation": {
+                "title": "Elevation",
+                "desc": "We don't settle for standard. We always seek the next level of quality."
+            },
+            "momentum": {
+                "title": "Momentum",
+                "desc": "Inertia is the enemy of growth. We keep your brand in constant motion."
+            },
+            "precision": {
+                "title": "Precision",
+                "desc": "AI-driven strategies, curated by humans. The perfect balance."
+            }
+        }
+    },
+    "services": {
+        "branding": "Brand identity",
+        "social": "Social media",
+        "ai": "AI integration",
+        "digital_accompaniment": {
+            "title": "Digital accompaniment",
+            "desc": "Growth strategy, content management, profile review, and personalized follow-up."
+        },
+        "brand_image": {
+            "title": "Brand image & branding",
+            "desc": "Visual identity creation, color palettes, typography, logos, and style guides."
+        },
+        "social_promotion": {
+            "title": "Social media promotion",
+            "desc": "Campaign planning, publication management, and results analysis."
+        },
+        "content_creation": {
+            "title": "Content creation",
+            "desc": "Photography, video, editing, creativity, and scriptwriting for social media."
+        },
+        "ai_implementation": {
+            "title": "AI implementation",
+            "desc": "Process audit, automation proposals, and integration of AI tools."
+        }
+    },
+    "footer": {
+        "rights": "© 2025 Yumpin.com"
+    }
+}
