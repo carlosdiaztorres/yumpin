@@ -42,7 +42,7 @@ const About = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    style={{ fontSize: 'var(--font-size-h3)', textAlign: 'center', marginBottom: '4rem', maxWidth: '800px', margin: '0 auto 4rem', lineHeight: 1.4 }}
+                    style={{ fontSize: 'var(--font-size-body)', textAlign: 'center', marginBottom: '4rem', maxWidth: '800px', margin: '0 auto 4rem', color: '#e0e0e0' }}
                 >
                     {t('about.subtitle')}
                 </motion.p>

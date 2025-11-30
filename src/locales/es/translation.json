@@ -38,8 +38,11 @@
     },
     "services": {
         "branding": "Identidad de marca",
+        "brandingSubtitle": "Identidad visual que deja huella.",
         "social": "Redes sociales",
+        "socialSubtitle": "Conectando tu mensaje con el mundo.",
         "ai": "Integración de IA",
+        "aiSubtitle": "Innovación que impulsa tu futuro.",
         "digital_accompaniment": {
             "title": "Acompañamiento digital",
             "desc": "Estrategia de crecimiento, gestión de contenidos, revisión de perfiles y seguimiento personalizado."

@@ -10,7 +10,7 @@ const ServiceItem = ({ title = '', description = '', delay }) => (
         transition={{ duration: 0.5, delay }}
         style={{ marginBottom: '3rem', background: 'rgba(0, 0, 0, 0.2)', backdropFilter: 'blur(10px)', padding: '2rem', borderRadius: '8px' }}
     >
-        <h2 style={{ fontSize: 'var(--font-size-service-title)', marginBottom: '1rem', color: 'var(--color-primary)' }}>{title || 'Título'}</h2>
+        <h2 style={{ fontSize: 'var(--font-size-service-title)', marginBottom: '1rem', color: 'var(--color-primary)', lineHeight: 1.2 }}>{title || 'Título'}</h2>
         <p style={{ fontSize: 'var(--font-size-body)', color: 'var(--color-light-grey)', maxWidth: '600px' }}>{description || 'Descripción'}</p>
     </motion.div>
 );

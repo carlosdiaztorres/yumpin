@@ -38,8 +38,11 @@
     },
     "services": {
         "branding": "Brand identity",
+        "brandingSubtitle": "Visual identity that leaves a mark.",
         "social": "Social media",
+        "socialSubtitle": "Connecting your message with the world.",
         "ai": "AI integration",
+        "aiSubtitle": "Innovation that drives your future.",
         "digital_accompaniment": {
             "title": "Digital accompaniment",
             "desc": "Growth strategy, content management, profile review, and personalized follow-up."

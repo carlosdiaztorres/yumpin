@@ -80,7 +80,7 @@ const Home = () => {
 
                 <FullScreenSection
                     title={t('services.branding')}
-                    subtitle="Identidad visual que deja huella."
+                    subtitle={t('services.brandingSubtitle')}
                     align="left"
                     linkTo="/services"
                     onActivate={() => {
@@ -91,7 +91,7 @@ const Home = () => {
 
                 <FullScreenSection
                     title={t('services.social')}
-                    subtitle="Conectando tu mensaje con el mundo."
+                    subtitle={t('services.socialSubtitle')}
                     align="right"
                     linkTo="/services"
                     onActivate={() => {
@@ -102,7 +102,7 @@ const Home = () => {
 
                 <FullScreenSection
                     title={t('services.ai')}
-                    subtitle="Innovación que impulsa tu futuro."
+                    subtitle={t('services.aiSubtitle')}
                     align="left"
                     linkTo="/services"
                     onActivate={() => {
