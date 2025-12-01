@@ -8,10 +8,10 @@ const ServiceItem = ({ title = '', description = '', delay }) => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay }}
-        style={{ marginBottom: '3rem', background: 'rgba(0, 0, 0, 0.2)', backdropFilter: 'blur(10px)', padding: '2rem', borderRadius: '8px' }}
+        style={{ marginBottom: '3rem', background: 'rgba(0, 0, 0, 0.2)', backdropFilter: 'blur(10px)', padding: '2rem', borderRadius: '8px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', flex: '1 1 300px', maxWidth: '400px' }}
     >
         <h2 style={{ fontSize: 'var(--font-size-service-title)', marginBottom: '1rem', color: 'var(--color-primary)', lineHeight: 1.2 }}>{title || 'Título'}</h2>
-        <p style={{ fontSize: 'var(--font-size-body)', color: 'var(--color-light-grey)', maxWidth: '600px' }}>{description || 'Descripción'}</p>
+        <p style={{ fontSize: 'var(--font-size-body)', color: 'var(--color-light-grey)', maxWidth: '100%' }}>{description || 'Descripción'}</p>
     </motion.div>
 );
 
@@ -51,7 +51,7 @@ const Services = () => {
                     {t('header.services')}
                 </motion.h1>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem' }}>
                     {servicesList.map((service) => (
                         <ServiceItem
                             key={service.key}
