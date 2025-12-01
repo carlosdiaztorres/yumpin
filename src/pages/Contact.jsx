@@ -45,8 +45,8 @@ const Contact = () => {
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', alignItems: 'center' }}>
-                        <a href="mailto:jump@yumpin.com" style={{ fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', transition: 'color 0.3s' }}>
-                            ✉️ jump@yumpin.com
+                        <a href="mailto:yump@yumpin.com" style={{ fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', transition: 'color 0.3s' }}>
+                            ✉️ yump@yumpin.com
                         </a>
                         <a href="tel:+34687362130" style={{ fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', transition: 'color 0.3s' }}>
                             📞 +34 687 36 21 30
