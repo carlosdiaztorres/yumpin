@@ -29,7 +29,7 @@ const LoadingScreen = () => (
     zIndex: 9999,
     color: 'white'
   }}>
-    <div style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>Yumpin.com</div>
+    <div style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>Yumppin.com</div>
   </div>
 );
 

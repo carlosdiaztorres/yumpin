@@ -11,7 +11,7 @@
         "subtitle": "We are here to listen and elevate your project to the next level."
     },
     "home": {
-        "welcome": "Welcome to Yumpin.com",
+        "welcome": "Welcome to Yumppin.com",
         "subtitle": "Creative agency and digital accompaniment.",
         "heroTitle": "Elevate your digital presence",
         "heroSubtitle": "We help creators and businesses professionalize their brand with creativity and AI innovation.",
@@ -20,7 +20,7 @@
     },
     "about": {
         "title": "We don't just walk, we jump.",
-        "subtitle": "In a crowded digital world, standing out requires momentum. Yumpin is the springboard for creators and brands ready to go higher.",
+        "subtitle": "In a crowded digital world, standing out requires momentum. Yumppin is the springboard for creators and brands ready to go higher.",
         "mission": {
             "title": "Our Mission",
             "desc": "Professionalizing talent. We transform creativity into measurable impact through strategy and technology."
@@ -69,6 +69,6 @@
         }
     },
     "footer": {
-        "rights": "© 2025 Yumpin.com"
+        "rights": "© 2025 Yumppin.com"
     }
 }

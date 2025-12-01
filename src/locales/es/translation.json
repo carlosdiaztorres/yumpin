@@ -11,7 +11,7 @@
         "subtitle": "Estamos aquí para escucharte y elevar tu proyecto al siguiente nivel."
     },
     "home": {
-        "welcome": "Bienvenido a Yumpin.com",
+        "welcome": "Bienvenido a Yumppin.com",
         "subtitle": "Agencia creativa y de acompañamiento digital.",
         "heroTitle": "Impulsa tu presencia digital",
         "heroSubtitle": "Ayudamos a creadores y negocios a profesionalizar su marca con creatividad e innovación.",
@@ -20,7 +20,7 @@
     },
     "about": {
         "title": "No caminamos, saltamos.",
-        "subtitle": "En un mundo digital saturado, destacar requiere impulso. Yumpin es el trampolín para creadores y marcas listos para llegar más alto.",
+        "subtitle": "En un mundo digital saturado, destacar requiere impulso. Yumppin es el trampolín para creadores y marcas listos para llegar más alto.",
         "mission": {
             "title": "Nuestra Misión",
             "desc": "Profesionalizar el talento. Transformamos la creatividad en impacto medible mediante estrategia y tecnología."
@@ -69,6 +69,6 @@
         }
     },
     "footer": {
-        "rights": "© 2025 Yumpin.com"
+        "rights": "© 2025 Yumppin.com"
     }
 }
