@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const Hero = ({ onActivate }) => {
@@ -45,7 +46,8 @@ const Hero = ({ onActivate }) => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                    <button style={{
+                    <Link to="/services" style={{
+                        display: 'inline-block',
                         padding: '1rem 2rem',
                         fontSize: '1.1rem',
                         fontWeight: 'bold',
@@ -54,6 +56,7 @@ const Hero = ({ onActivate }) => {
                         borderRadius: '50px',
                         cursor: 'pointer',
                         border: 'none',
+                        textDecoration: 'none',
                         transition: 'transform 0.2s, box-shadow 0.2s',
                         boxShadow: '0 4px 15px rgba(239, 35, 60, 0.4)'
                     }}
@@ -67,7 +70,7 @@ const Hero = ({ onActivate }) => {
                         }}
                     >
                         {t('home.cta')}
-                    </button>
+                    </Link>
                 </motion.div>
             </div>
         </motion.section>

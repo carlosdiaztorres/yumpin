@@ -6,6 +6,10 @@
         "customers": "Clientes",
         "contact": "Contacto"
     },
+    "contact": {
+        "ready": "¿Listo para dar el salto?",
+        "subtitle": "Estamos aquí para escucharte y elevar tu proyecto al siguiente nivel."
+    },
     "home": {
         "welcome": "Bienvenido a Yumpin.com",
         "subtitle": "Agencia creativa y de acompañamiento digital.",

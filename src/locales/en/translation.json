@@ -6,6 +6,10 @@
         "customers": "Customers",
         "contact": "Contact"
     },
+    "contact": {
+        "ready": "Ready to jump?",
+        "subtitle": "We are here to listen and elevate your project to the next level."
+    },
     "home": {
         "welcome": "Welcome to Yumpin.com",
         "subtitle": "Creative agency and digital accompaniment.",
