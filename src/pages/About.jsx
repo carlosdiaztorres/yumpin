@@ -11,7 +11,8 @@ const About = () => {
         backdropFilter: 'blur(10px)',
         padding: '2rem',
         borderRadius: '8px',
-        marginBottom: '2rem'
+        marginBottom: '2rem',
+        textAlign: 'center'
     };
 
     return (
