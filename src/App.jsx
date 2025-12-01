@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import About from './pages/About';
-import Customers from './pages/Customers';
+import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Layout from './components/Layout';
 import heroBg from './assets/hero-jump.jpg';
@@ -76,7 +76,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
-          <Route path="/customers" element={<Customers />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Layout>
