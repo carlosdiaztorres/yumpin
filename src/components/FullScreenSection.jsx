@@ -48,7 +48,7 @@ const FullScreenSection = ({ title, subtitle, align = 'center', linkTo, onActiva
                 scrollSnapAlign: 'start',
                 overflow: 'hidden',
                 color: 'white',
-                textAlign: align === 'center' ? 'center' : 'left'
+                textAlign: align === 'center' ? 'center' : align === 'right' ? 'right' : 'left'
             }}
         >
             {/* Content */}
