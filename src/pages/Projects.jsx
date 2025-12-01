@@ -41,4 +41,4 @@ const Projects = () => {
     );
 };
 
-export default Customers;
+export default Projects;
