@@ -5,6 +5,7 @@ import BackgroundTransition from '../components/BackgroundTransition';
 import portfolioBg from '../assets/portfolio-jump.jpg';
 import trampoleenLogo from '../assets/trampoleen-logo.png';
 import sismaquaLogo from '../assets/sismaqua-logo.png';
+import vinarisLogo from '../assets/vinaris-logo.jpg';
 import DiagonalStripes from '../components/DiagonalStripes';
 
 const ProjectCard = ({ project, logo, index }) => {
