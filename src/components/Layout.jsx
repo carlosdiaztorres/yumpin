@@ -36,7 +36,7 @@ const Header = () => {
             background: isMenuOpen ? 'rgba(0,0,0,0.8)' : 'transparent',
             transition: 'background 0.3s ease'
         }}>
-            <a href="/" style={{ fontWeight: 'bold', fontSize: '1.5rem', textDecoration: 'none', color: 'white', zIndex: 101 }}>Yumppin.com</a>
+            <a href="/" style={{ fontWeight: 'bold', fontSize: '1.5rem', textDecoration: 'none', color: 'white', zIndex: 101 }}>Yumpeen.com</a>
 
             {/* Desktop Nav */}
             <nav className="hidden-mobile" style={{ gap: '1rem', alignItems: 'center' }}>
