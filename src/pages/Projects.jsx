@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import BackgroundTransition from '../components/BackgroundTransition';
@@ -60,7 +61,7 @@ const ProjectCard = ({ project, logo, index }) => {
             </div>
 
             {/* Tooltip following cursor */}
-            {isHovered && (
+            {isHovered && createPortal(
                 <motion.div
                     style={{
                         position: 'fixed',
@@ -74,12 +75,13 @@ const ProjectCard = ({ project, logo, index }) => {
                         fontSize: '0.9rem',
                         lineHeight: '1.6',
                         pointerEvents: 'none',
-                        zIndex: 1000,
+                        zIndex: 9999,
                         boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
                         border: '1px solid rgba(239, 35, 60, 0.3)'
                     }}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
                     transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                 >
                     <strong style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-primary)', fontSize: '1rem' }}>
@@ -89,7 +91,8 @@ const ProjectCard = ({ project, logo, index }) => {
                     <div style={{ marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(255,255,255,0.2)', fontSize: '0.85rem', fontStyle: 'italic', color: '#ccc' }}>
                         {t(`projects.${project}.services`)}
                     </div>
-                </motion.div>
+                </motion.div>,
+                document.body
             )}
         </motion.div>
     );
