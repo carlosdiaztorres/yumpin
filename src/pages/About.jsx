@@ -50,16 +50,7 @@ const About = () => {
                     {t('about.subtitle')}
                 </motion.p>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                    style={{ ...containerStyle, textAlign: 'center' }}
-                >
-                    <h2 style={{ color: 'var(--color-primary)', marginBottom: '1rem', fontSize: 'var(--font-size-h2)' }}>{t('about.mission.title')}</h2>
-                    <p style={{ fontSize: 'var(--font-size-body)' }}>{t('about.mission.desc')}</p>
-                </motion.div>
+
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
                     {['elevation', 'momentum', 'precision'].map((value, index) => (
