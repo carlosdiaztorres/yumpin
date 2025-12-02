@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from '../../node_modules/react-i18next';
 import { motion } from 'framer-motion';
 import BackgroundTransition from '../components/BackgroundTransition';
 import contactBg from '../assets/contact-jump.jpg';
@@ -46,10 +46,10 @@ const Contact = () => {
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', alignItems: 'center' }}>
                         <a href="mailto:yump@yumpeen.com" style={{ fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', transition: 'color 0.3s' }}>
-                            ✉️ yump@yumpeen.com
+                            yump@yumpeen.com
                         </a>
-                        <a href="tel:+34687362130" style={{ fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', transition: 'color 0.3s' }}>
-                            📞 +34 687 36 21 30
+                        <a href="https://wa.me/34687362130" target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', transition: 'color 0.3s' }}>
+                            +34 687 36 21 30
                         </a>
                     </div>
                 </motion.div>
