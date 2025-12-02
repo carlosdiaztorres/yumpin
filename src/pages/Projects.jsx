@@ -27,9 +27,7 @@ const ProjectCard = ({ project, logo, index }) => {
         marginBottom: '2rem',
         position: 'relative',
         cursor: 'pointer',
-        overflow: 'visible',
-        WebkitMaskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)',
-        maskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)'
+        overflow: 'visible'
     };
 
     return (
@@ -43,6 +41,39 @@ const ProjectCard = ({ project, logo, index }) => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
+            {/* Red diagonal stripes */}
+            <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '40px',
+                height: '40px',
+                overflow: 'hidden',
+                borderTopLeftRadius: '8px',
+                pointerEvents: 'none'
+            }}>
+                <div style={{
+                    position: 'absolute',
+                    width: '2px',
+                    height: '60px',
+                    background: 'var(--color-primary)',
+                    transform: 'rotate(-45deg)',
+                    transformOrigin: 'top left',
+                    top: '20px',
+                    left: '0px'
+                }} />
+                <div style={{
+                    position: 'absolute',
+                    width: '2px',
+                    height: '60px',
+                    background: 'var(--color-primary)',
+                    transform: 'rotate(-45deg)',
+                    transformOrigin: 'top left',
+                    top: '24px',
+                    left: '0px'
+                }} />
+            </div>
+
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '200px' }}>
                 <img
                     src={logo}
