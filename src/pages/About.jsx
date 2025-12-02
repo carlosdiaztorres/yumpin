@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import BackgroundTransition from '../components/BackgroundTransition';
 import aboutBg from '../assets/about-jump.jpg';
 
+import DiagonalStripes from '../components/DiagonalStripes';
+
 const About = () => {
     const { t } = useTranslation();
 
@@ -13,8 +15,8 @@ const About = () => {
         borderRadius: '8px',
         marginBottom: '2rem',
         textAlign: 'center',
-        WebkitMaskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)',
-        maskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)'
+        position: 'relative',
+        overflow: 'hidden'
     };
 
     return (
@@ -51,7 +53,6 @@ const About = () => {
                 </motion.p>
 
 
-
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
                     {['elevation', 'momentum', 'precision'].map((value, index) => (
                         <motion.div
@@ -62,6 +63,7 @@ const About = () => {
                             viewport={{ once: true }}
                             style={containerStyle}
                         >
+                            <DiagonalStripes />
                             <h3 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem', fontSize: 'var(--font-size-h3)' }}>
                                 {t(`about.values.${value}.title`)}
                             </h3>

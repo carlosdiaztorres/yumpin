@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import BackgroundTransition from '../components/BackgroundTransition';
 import servicesBg from '../assets/services-jump.jpg';
 
+import DiagonalStripes from '../components/DiagonalStripes';
+
 const ServiceItem = ({ title = '', description = '', delay }) => (
     <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -20,10 +22,11 @@ const ServiceItem = ({ title = '', description = '', delay }) => (
             alignItems: 'center',
             flex: '1 1 300px',
             maxWidth: '400px',
-            WebkitMaskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)',
-            maskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)'
+            position: 'relative',
+            overflow: 'hidden'
         }}
     >
+        <DiagonalStripes />
         <h2 style={{ fontSize: 'var(--font-size-service-title)', marginBottom: '1rem', color: 'var(--color-primary)', lineHeight: 1.2 }}>{title || 'Título'}</h2>
         <p style={{ fontSize: 'var(--font-size-body)', color: 'var(--color-light-grey)', maxWidth: '100%' }}>{description || 'Descripción'}</p>
     </motion.div>

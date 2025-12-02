@@ -13,26 +13,16 @@ const Contact = () => {
                 credit={t('home.photoCredit', { author: 'Max MX', source: 'Unsplash' })}
             />
             <div style={{
-                padding: '4rem 2rem',
-                minHeight: '100vh',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                textAlign: 'center',
+                padding: '8rem 2rem 4rem',
+                maxWidth: '1200px',
+                margin: '0 auto',
                 position: 'relative',
                 zIndex: 1,
-                color: 'white'
+                minHeight: '100vh',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
             }}>
-                <motion.h1
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    style={{ fontSize: 'var(--font-size-h1)', marginBottom: '2rem' }}
-                >
-                    {t('header.contact')}
-                </motion.h1>
-
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -44,10 +34,11 @@ const Contact = () => {
                         borderRadius: '8px',
                         maxWidth: '600px',
                         width: '100%',
-                        WebkitMaskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)',
-                        maskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)'
+                        position: 'relative',
+                        overflow: 'hidden'
                     }}
                 >
+                    <DiagonalStripes />
                     <div style={{ marginBottom: '2rem' }}>
                         <h2 style={{ fontSize: 'var(--font-size-h3)', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>{t('contact.ready')}</h2>
                         <p style={{ fontSize: 'var(--font-size-body)', marginBottom: '2rem' }}>{t('contact.subtitle')}</p>

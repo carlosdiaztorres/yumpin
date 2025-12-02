@@ -5,7 +5,7 @@ import BackgroundTransition from '../components/BackgroundTransition';
 import portfolioBg from '../assets/portfolio-jump.jpg';
 import trampoleenLogo from '../assets/trampoleen-logo.png';
 import sismaquaLogo from '../assets/sismaqua-logo.png';
-import vinarisLogo from '../assets/vinaris-logo.jpg';
+import DiagonalStripes from '../components/DiagonalStripes';
 
 const ProjectCard = ({ project, logo, index }) => {
     const { t } = useTranslation();
@@ -41,38 +41,7 @@ const ProjectCard = ({ project, logo, index }) => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            {/* Red diagonal stripes */}
-            <div style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '40px',
-                height: '40px',
-                overflow: 'hidden',
-                borderTopLeftRadius: '8px',
-                pointerEvents: 'none'
-            }}>
-                <div style={{
-                    position: 'absolute',
-                    width: '2px',
-                    height: '60px',
-                    background: 'var(--color-primary)',
-                    transform: 'rotate(-45deg)',
-                    transformOrigin: 'top left',
-                    top: '20px',
-                    left: '0px'
-                }} />
-                <div style={{
-                    position: 'absolute',
-                    width: '2px',
-                    height: '60px',
-                    background: 'var(--color-primary)',
-                    transform: 'rotate(-45deg)',
-                    transformOrigin: 'top left',
-                    top: '24px',
-                    left: '0px'
-                }} />
-            </div>
+            <DiagonalStripes />
 
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '200px' }}>
                 <img
