@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import BackgroundTransition from '../components/BackgroundTransition';
 import contactBg from '../assets/contact-jump.jpg';
+import DiagonalStripes from '../components/DiagonalStripes';
 
 const Contact = () => {
     const { t } = useTranslation();
