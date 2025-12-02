@@ -36,6 +36,23 @@
             }
         }
     },
+    "projects": {
+        "trampoleen": {
+            "name": "Trampoleen",
+            "desc": "Trampoleen es un espacio de creación y colaboración en el que apoyamos a personas dinámicas y comprometidas en su intento de transformar el mundo del contenido (o el mundo en sí). Creemos en la fuerza del talento colectivo, impulsado por la diversidad, la creatividad y la acción. Juntos construimos proyectos que reflejan una visión positiva, donde la innovación y el cambio social van de la mano.",
+            "services": "Imagen de marca, gestión de contenidos en redes e impacto en revenue gracias al empleo de IA."
+        },
+        "sismaqua": {
+            "name": "Sismaqua",
+            "desc": "Sismaqua es una empresa líder en el tratamiento de aguas, especializada en soluciones innovadoras para la purificación y gestión sostenible del recurso hídrico. Con un compromiso firme hacia la calidad y el medio ambiente, Sismaqua ofrece tecnología de vanguardia para garantizar agua limpia y segura en diversos sectores industriales y municipales.",
+            "services": "Desarrollo de imagen de marca: logo, tipografía, paleta de colores y guía de estilo."
+        },
+        "vinaris": {
+            "name": "Vinaris",
+            "desc": "Vinaris nace como una startup tecnológica que trata de acercar pequeñas bodegas a los consumidores, al margen de las redes tradicionales de distribución comercial. Nuestra filosofía trata el vino más como un producto agrícola vivo, que como uno comercial, y por tanto, intentamos comprender su tipicidad: la región de la que procede, su variedad, la añada, el tamaño del viñedo, el tipo de cultivo, los rendimientos... sin olvidar el trabajo en bodega, que ha de respetar todo lo anterior.",
+            "services": "Acompañamiento integral desde el inicio del proyecto, imagen de marca y estrategia de comunicación."
+        }
+    },
     "services": {
         "branding": "Identidad de marca",
         "brandingSubtitle": "Identidad visual que deja huella.",

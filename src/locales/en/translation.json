@@ -36,6 +36,23 @@
             }
         }
     },
+    "projects": {
+        "trampoleen": {
+            "name": "Trampoleen",
+            "desc": "Trampoleen is a space for creation and collaboration where we support dynamic and committed people in their attempt to transform the world of content (or the world itself). We believe in the power of collective talent, driven by diversity, creativity, and action. Together we build projects that reflect a positive vision, where innovation and social change go hand in hand.",
+            "services": "Brand identity, social media content management, and revenue impact through AI implementation."
+        },
+        "sismaqua": {
+            "name": "Sismaqua",
+            "desc": "Sismaqua is a leading company in water treatment, specialized in innovative solutions for purification and sustainable management of water resources. With a firm commitment to quality and the environment, Sismaqua offers cutting-edge technology to ensure clean and safe water in various industrial and municipal sectors.",
+            "services": "Brand identity development: logo, typography, color palette, and style guide."
+        },
+        "vinaris": {
+            "name": "Vinaris",
+            "desc": "Vinaris was born as a technological startup that seeks to bring small wineries closer to consumers, outside traditional commercial distribution networks. Our philosophy treats wine more as a living agricultural product than a commercial one, and therefore, we try to understand its typicity: the region it comes from, its variety, the vintage, the size of the vineyard, the type of cultivation, the yields... without forgetting the work in the winery, which must respect all of the above.",
+            "services": "Comprehensive support from the project's inception, brand identity, and communication strategy."
+        }
+    },
     "services": {
         "branding": "Brand identity",
         "brandingSubtitle": "Visual identity that leaves a mark.",
