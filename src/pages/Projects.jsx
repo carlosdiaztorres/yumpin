@@ -4,21 +4,28 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import BackgroundTransition from '../components/BackgroundTransition';
 import portfolioBg from '../assets/portfolio-jump.jpg';
-import trampoleenLogo from '../assets/trampoleen-logo-new.png';
-import sismaquaLogo from '../assets/sismaqua-logo-new.png';
-import vinarisLogo from '../assets/vinaris-logo-new.png';
+import trampoleenLogo from '../assets/trampoleen-logo-final.png';
+import sismaquaLogo from '../assets/sismaqua-logo-final.png';
+import vinarisLogo from '../assets/vinaris-logo-final.png';
 
 
 const ProjectCard = ({ project, logo, index }) => {
     const { t } = useTranslation();
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovered, setIsHovered] = useState(false);
+    const [showMobileModal, setShowMobileModal] = useState(false);
 
     const handleMouseMove = (e) => {
         setMousePosition({
             x: e.clientX,
             y: e.clientY
         });
+    };
+
+    const handleCardClick = () => {
+        if (window.innerWidth <= 768) {
+            setShowMobileModal(true);
+        }
     };
 
     const cardStyle = {
@@ -42,8 +49,9 @@ const ProjectCard = ({ project, logo, index }) => {
             viewport={{ once: true }}
             style={cardStyle}
             onMouseMove={handleMouseMove}
-            onMouseEnter={() => setIsHovered(true)}
+            onMouseEnter={() => window.innerWidth > 768 && setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            onClick={handleCardClick}
         >
 
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '200px' }}>
@@ -60,8 +68,8 @@ const ProjectCard = ({ project, logo, index }) => {
                 />
             </div>
 
-            {/* Tooltip following cursor */}
-            {isHovered && createPortal(
+            {/* Desktop Tooltip following cursor */}
+            {isHovered && !showMobileModal && createPortal(
                 <motion.div
                     style={{
                         position: 'fixed',
@@ -91,6 +99,63 @@ const ProjectCard = ({ project, logo, index }) => {
                     <div style={{ marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(255,255,255,0.2)', fontSize: '0.85rem', fontStyle: 'italic', color: '#ccc' }}>
                         {t(`projects.${project}.services`)}
                     </div>
+                </motion.div>,
+                document.body
+            )}
+
+            {/* Mobile Modal */}
+            {showMobileModal && createPortal(
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    style={{
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        background: 'rgba(0,0,0,0.85)',
+                        zIndex: 10000,
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        padding: '2rem',
+                        backdropFilter: 'blur(5px)'
+                    }}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        setShowMobileModal(false);
+                    }}
+                >
+                    <motion.div
+                        initial={{ scale: 0.9, y: 20 }}
+                        animate={{ scale: 1, y: 0 }}
+                        style={{
+                            background: 'rgba(3, 19, 40, 0.98)',
+                            border: '1px solid rgba(239, 35, 60, 0.5)',
+                            padding: '2rem',
+                            borderRadius: '12px',
+                            maxWidth: '100%',
+                            width: '400px',
+                            color: 'white',
+                            textAlign: 'center',
+                            boxShadow: '0 10px 40px rgba(0,0,0,0.5)'
+                        }}
+                    >
+                        <strong style={{ display: 'block', marginBottom: '1rem', color: 'var(--color-primary)', fontSize: '1.2rem' }}>
+                            {t(`projects.${project}.name`)}
+                        </strong>
+                        <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
+                            {t(`projects.${project}.desc`)}
+                        </p>
+                        <div style={{ paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.2)', fontSize: '0.9rem', fontStyle: 'italic', color: '#ccc' }}>
+                            {t(`projects.${project}.services`)}
+                        </div>
+                        <div style={{ marginTop: '1.5rem', fontSize: '0.8rem', color: '#666' }}>
+                            {t('common.tapToClose', 'Toca para cerrar')}
+                        </div>
+                    </motion.div>
                 </motion.div>,
                 document.body
             )}
