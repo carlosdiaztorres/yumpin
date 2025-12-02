@@ -13,22 +13,21 @@ const ProjectCard = ({ project, logo, index }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     const handleMouseMove = (e) => {
-        const rect = e.currentTarget.getBoundingClientRect();
         setMousePosition({
-            x: e.clientX - rect.left,
-            y: e.clientY - rect.top
+            x: e.pageX,
+            y: e.pageY
         });
     };
 
     const cardStyle = {
-        background: 'white',
+        background: 'rgba(0, 0, 0, 0.2)',
         backdropFilter: 'blur(10px)',
-        padding: '2rem',
+        padding: '3rem 2rem',
         borderRadius: '8px',
         marginBottom: '2rem',
         position: 'relative',
         cursor: 'pointer',
-        overflow: 'hidden',
+        overflow: 'visible',
         WebkitMaskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)',
         maskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)'
     };
@@ -44,14 +43,16 @@ const ProjectCard = ({ project, logo, index }) => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '150px' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '200px' }}>
                 <img
                     src={logo}
                     alt={t(`projects.${project}.name`)}
                     style={{
-                        maxWidth: '80%',
-                        maxHeight: '120px',
-                        objectFit: 'contain'
+                        maxWidth: '100%',
+                        maxHeight: '180px',
+                        objectFit: 'contain',
+                        filter: 'grayscale(100%) brightness(1.2)',
+                        opacity: 0.9
                     }}
                 />
             </div>
@@ -60,30 +61,30 @@ const ProjectCard = ({ project, logo, index }) => {
             {isHovered && (
                 <motion.div
                     style={{
-                        position: 'absolute',
-                        left: mousePosition.x,
-                        top: mousePosition.y,
-                        transform: 'translate(-50%, -50%)',
-                        background: 'rgba(3, 19, 40, 0.95)',
+                        position: 'fixed',
+                        left: mousePosition.x + 20,
+                        top: mousePosition.y + 20,
+                        background: 'rgba(3, 19, 40, 0.98)',
                         color: 'white',
-                        padding: '1rem',
+                        padding: '1.25rem',
                         borderRadius: '8px',
-                        maxWidth: '300px',
-                        fontSize: '0.85rem',
-                        lineHeight: '1.5',
+                        maxWidth: '350px',
+                        fontSize: '0.9rem',
+                        lineHeight: '1.6',
                         pointerEvents: 'none',
-                        zIndex: 10,
-                        boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
+                        zIndex: 1000,
+                        boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+                        border: '1px solid rgba(239, 35, 60, 0.3)'
                     }}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                 >
-                    <strong style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>
+                    <strong style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-primary)', fontSize: '1rem' }}>
                         {t(`projects.${project}.name`)}
                     </strong>
                     {t(`projects.${project}.desc`)}
-                    <div style={{ marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(255,255,255,0.2)', fontSize: '0.8rem', fontStyle: 'italic' }}>
+                    <div style={{ marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(255,255,255,0.2)', fontSize: '0.85rem', fontStyle: 'italic', color: '#ccc' }}>
                         {t(`projects.${project}.services`)}
                     </div>
                 </motion.div>
