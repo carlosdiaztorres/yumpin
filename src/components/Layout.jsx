@@ -32,8 +32,8 @@ const Header = () => {
             width: '100%',
             zIndex: 100,
             color: 'white',
-            backdropFilter: isMenuOpen ? 'blur(10px)' : 'none',
-            background: isMenuOpen ? 'rgba(0,0,0,0.8)' : 'transparent',
+            backdropFilter: 'blur(10px)',
+            background: isMenuOpen ? 'rgba(0,0,0,0.9)' : 'rgba(0,0,0,0.3)',
             transition: 'background 0.3s ease'
         }}>
             <a href="/" style={{ fontWeight: 'bold', fontSize: '1.5rem', textDecoration: 'none', color: 'white', zIndex: 101 }}>Yumpeen.com</a>
@@ -118,10 +118,12 @@ const Footer = () => {
             padding: '2rem',
             textAlign: 'center',
             fontSize: '0.9rem',
-            color: '#888',
+            color: '#aaa',
             letterSpacing: '1px',
             position: 'relative',
-            zIndex: 100
+            zIndex: 100,
+            background: 'rgba(0,0,0,0.3)',
+            backdropFilter: 'blur(10px)'
         }}>
             {t('footer.rights')}
         </footer>

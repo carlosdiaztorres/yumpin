@@ -8,7 +8,21 @@ const ServiceItem = ({ title = '', description = '', delay }) => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay }}
-        style={{ marginBottom: '3rem', background: 'rgba(0, 0, 0, 0.2)', backdropFilter: 'blur(10px)', padding: '2rem', borderRadius: '8px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', flex: '1 1 300px', maxWidth: '400px' }}
+        style={{
+            marginBottom: '3rem',
+            background: 'rgba(0, 0, 0, 0.2)',
+            backdropFilter: 'blur(10px)',
+            padding: '2rem',
+            borderRadius: '8px',
+            textAlign: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            flex: '1 1 300px',
+            maxWidth: '400px',
+            WebkitMaskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)',
+            maskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)'
+        }}
     >
         <h2 style={{ fontSize: 'var(--font-size-service-title)', marginBottom: '1rem', color: 'var(--color-primary)', lineHeight: 1.2 }}>{title || 'Título'}</h2>
         <p style={{ fontSize: 'var(--font-size-body)', color: 'var(--color-light-grey)', maxWidth: '100%' }}>{description || 'Descripción'}</p>

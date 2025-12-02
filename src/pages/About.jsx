@@ -12,7 +12,9 @@ const About = () => {
         padding: '2rem',
         borderRadius: '8px',
         marginBottom: '2rem',
-        textAlign: 'center'
+        textAlign: 'center',
+        WebkitMaskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)',
+        maskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)'
     };
 
     return (

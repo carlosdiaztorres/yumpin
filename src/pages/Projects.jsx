@@ -33,7 +33,14 @@ const Projects = () => {
                     {t('header.projects')}
                 </motion.h1>
 
-                <div style={{ background: 'rgba(0, 0, 0, 0.2)', backdropFilter: 'blur(10px)', padding: '2rem', borderRadius: '8px' }}>
+                <div style={{
+                    background: 'rgba(0, 0, 0, 0.2)',
+                    backdropFilter: 'blur(10px)',
+                    padding: '2rem',
+                    borderRadius: '8px',
+                    WebkitMaskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)',
+                    maskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)'
+                }}>
                     <p style={{ fontSize: 'var(--font-size-h3)' }}>Coming soon...</p>
                 </div>
             </div>

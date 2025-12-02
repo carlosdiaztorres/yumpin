@@ -37,7 +37,16 @@ const Contact = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    style={{ background: 'rgba(0, 0, 0, 0.2)', backdropFilter: 'blur(10px)', padding: '3rem', borderRadius: '8px', maxWidth: '600px', width: '100%' }}
+                    style={{
+                        background: 'rgba(0, 0, 0, 0.2)',
+                        backdropFilter: 'blur(10px)',
+                        padding: '3rem',
+                        borderRadius: '8px',
+                        maxWidth: '600px',
+                        width: '100%',
+                        WebkitMaskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)',
+                        maskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)'
+                    }}
                 >
                     <div style={{ marginBottom: '2rem' }}>
                         <h2 style={{ fontSize: 'var(--font-size-h3)', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>{t('contact.ready')}</h2>
