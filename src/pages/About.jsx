@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import BackgroundTransition from '../components/BackgroundTransition';
 import aboutBg from '../assets/about-jump.jpg';
 
-import DiagonalStripes from '../components/DiagonalStripes';
+
 
 const About = () => {
     const { t } = useTranslation();
@@ -15,8 +15,8 @@ const About = () => {
         borderRadius: '8px',
         marginBottom: '2rem',
         textAlign: 'center',
-        position: 'relative',
-        overflow: 'hidden'
+        WebkitMaskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)',
+        maskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)'
     };
 
     return (
@@ -63,7 +63,6 @@ const About = () => {
                             viewport={{ once: true }}
                             style={containerStyle}
                         >
-                            <DiagonalStripes />
                             <h3 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem', fontSize: 'var(--font-size-h3)' }}>
                                 {t(`about.values.${value}.title`)}
                             </h3>

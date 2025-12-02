@@ -6,7 +6,7 @@ import portfolioBg from '../assets/portfolio-jump.jpg';
 import trampoleenLogo from '../assets/trampoleen-logo.png';
 import sismaquaLogo from '../assets/sismaqua-logo.png';
 import vinarisLogo from '../assets/vinaris-logo.jpg';
-import DiagonalStripes from '../components/DiagonalStripes';
+
 
 const ProjectCard = ({ project, logo, index }) => {
     const { t } = useTranslation();
@@ -28,7 +28,9 @@ const ProjectCard = ({ project, logo, index }) => {
         marginBottom: '2rem',
         position: 'relative',
         cursor: 'pointer',
-        overflow: 'visible'
+        overflow: 'visible',
+        WebkitMaskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)',
+        maskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)'
     };
 
     return (
@@ -42,7 +44,6 @@ const ProjectCard = ({ project, logo, index }) => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <DiagonalStripes />
 
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '200px' }}>
                 <img

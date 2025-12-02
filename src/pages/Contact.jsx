@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import BackgroundTransition from '../components/BackgroundTransition';
 import contactBg from '../assets/contact-jump.jpg';
-import DiagonalStripes from '../components/DiagonalStripes';
+
 
 const Contact = () => {
     const { t } = useTranslation();
@@ -35,11 +35,14 @@ const Contact = () => {
                         borderRadius: '8px',
                         maxWidth: '600px',
                         width: '100%',
-                        position: 'relative',
-                        overflow: 'hidden'
+                        borderRadius: '8px',
+                        maxWidth: '600px',
+                        width: '100%',
+                        textAlign: 'center',
+                        WebkitMaskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)',
+                        maskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)'
                     }}
                 >
-                    <DiagonalStripes />
                     <div style={{ marginBottom: '2rem' }}>
                         <h2 style={{ fontSize: 'var(--font-size-h3)', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>{t('contact.ready')}</h2>
                         <p style={{ fontSize: 'var(--font-size-body)', marginBottom: '2rem' }}>{t('contact.subtitle')}</p>
