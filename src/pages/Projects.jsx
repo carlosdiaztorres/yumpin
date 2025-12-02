@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import BackgroundTransition from '../components/BackgroundTransition';
 import portfolioBg from '../assets/portfolio-jump.jpg';
-import trampoleenLogo from '../assets/trampoleen-logo.png';
-import sismaquaLogo from '../assets/sismaqua-logo.png';
-import vinarisLogo from '../assets/vinaris-logo.jpg';
+import trampoleenLogo from '../assets/trampoleen-logo-new.png';
+import sismaquaLogo from '../assets/sismaqua-logo-new.png';
+import vinarisLogo from '../assets/vinaris-logo-new.png';
 
 
 const ProjectCard = ({ project, logo, index }) => {
