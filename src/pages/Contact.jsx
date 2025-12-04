@@ -39,8 +39,8 @@ const Contact = () => {
                         maxWidth: '600px',
                         width: '100%',
                         textAlign: 'center',
-                        WebkitMaskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)',
-                        maskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)'
+                        WebkitMaskImage: 'linear-gradient(140deg, black 20px, transparent 20px, transparent 24px, black 24px, black 28px, transparent 28px, transparent 32px, black 32px)',
+                        maskImage: 'linear-gradient(140deg, black 20px, transparent 20px, transparent 24px, black 24px, black 28px, transparent 28px, transparent 32px, black 32px)'
                     }}
                 >
                     <div style={{ marginBottom: '2rem' }}>

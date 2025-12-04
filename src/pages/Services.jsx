@@ -25,8 +25,8 @@ const ServiceItem = ({ title = '', description = '', delay }) => (
             alignItems: 'center',
             flex: '1 1 300px',
             maxWidth: '400px',
-            WebkitMaskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)',
-            maskImage: 'linear-gradient(135deg, black 20px, transparent 20px, transparent 22px, black 22px, black 26px, transparent 26px, transparent 28px, black 28px)'
+            WebkitMaskImage: 'linear-gradient(140deg, black 20px, transparent 20px, transparent 24px, black 24px, black 28px, transparent 28px, transparent 32px, black 32px)',
+            maskImage: 'linear-gradient(140deg, black 20px, transparent 20px, transparent 24px, black 24px, black 28px, transparent 28px, transparent 32px, black 32px)'
         }}
     >
         <h2 style={{ fontSize: 'var(--font-size-service-title)', marginBottom: '1rem', color: 'var(--color-primary)', lineHeight: 1.2 }}>{title || 'Título'}</h2>
