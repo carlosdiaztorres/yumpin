@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Instagram } from 'lucide-react';
 
 const Header = () => {
     const { t, i18n } = useTranslation();
@@ -121,8 +121,24 @@ const Footer = () => {
             color: '#aaa',
             letterSpacing: '1px',
             position: 'relative',
-            zIndex: 100
+            zIndex: 100,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '1rem'
         }}>
+            <div style={{ display: 'flex', gap: '1.5rem' }}>
+                <a
+                    href="https://instagram.com/yumpeen"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: 'white', transition: 'color 0.3s ease' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-primary)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+                >
+                    <Instagram size={24} />
+                </a>
+            </div>
             {t('footer.rights')}
         </footer>
     );
