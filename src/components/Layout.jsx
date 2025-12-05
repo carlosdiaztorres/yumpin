@@ -36,12 +36,38 @@ const Header = () => {
             background: isMenuOpen ? 'rgba(0,0,0,0.9)' : 'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 100%)',
             transition: 'background 0.3s ease'
         }}>
-            <a href="/" style={{ fontWeight: 'bold', fontSize: '1.5rem', textDecoration: 'none', color: 'white', zIndex: 101 }}>Yumpeen.com</a>
+            <a
+                href="/"
+                style={{
+                    fontWeight: 'bold',
+                    fontSize: '1.5rem',
+                    textDecoration: 'none',
+                    color: 'white',
+                    zIndex: 101,
+                    transition: 'color 0.3s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-primary)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+            >
+                Yumpeen.com
+            </a>
 
             {/* Desktop Nav */}
             <nav className="hidden-mobile" style={{ gap: '1rem', alignItems: 'center' }}>
                 {navLinks.map(link => (
-                    <Link key={link.to} to={link.to}>{link.label}</Link>
+                    <Link
+                        key={link.to}
+                        to={link.to}
+                        style={{
+                            color: 'white',
+                            textDecoration: 'none',
+                            transition: 'color 0.3s ease'
+                        }}
+                        onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-primary)'}
+                        onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+                    >
+                        {link.label}
+                    </Link>
                 ))}
                 <button
                     onClick={() => changeLanguage(i18n.language === 'es' ? 'en' : 'es')}

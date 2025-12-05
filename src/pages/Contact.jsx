@@ -49,10 +49,38 @@ const Contact = () => {
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', alignItems: 'center' }}>
-                        <a href="mailto:yump@yumpeen.com" style={{ fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', transition: 'color 0.3s' }}>
+                        <a
+                            href="mailto:yump@yumpeen.com"
+                            style={{
+                                fontSize: '1.2rem',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.5rem',
+                                transition: 'color 0.3s ease',
+                                color: 'white',
+                                textDecoration: 'none'
+                            }}
+                            onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-primary)'}
+                            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+                        >
                             yump@yumpeen.com
                         </a>
-                        <a href="https://wa.me/34687362130" target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', transition: 'color 0.3s' }}>
+                        <a
+                            href="https://wa.me/34687362130"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                                fontSize: '1.2rem',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.5rem',
+                                transition: 'color 0.3s ease',
+                                color: 'white',
+                                textDecoration: 'none'
+                            }}
+                            onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-primary)'}
+                            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+                        >
                             +34 687 36 21 30
                         </a>
                     </div>
