@@ -78,8 +78,11 @@ const Header = () => {
                         cursor: 'pointer',
                         fontSize: '1rem',
                         padding: 0,
-                        marginLeft: '1rem'
+                        marginLeft: '1rem',
+                        transition: 'color 0.3s ease'
                     }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-primary)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
                 >
                     {i18n.language === 'es' ? 'EN' : 'ES'}
                 </button>
@@ -126,7 +129,16 @@ const Header = () => {
                             fontSize: '1.2rem',
                             padding: '0.5rem 1rem',
                             borderRadius: '4px',
-                            marginTop: '1rem'
+                            marginTop: '1rem',
+                            transition: 'all 0.3s ease'
+                        }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.color = 'var(--color-primary)';
+                            e.currentTarget.style.borderColor = 'var(--color-primary)';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.color = 'white';
+                            e.currentTarget.style.borderColor = 'white';
                         }}
                     >
                         {i18n.language === 'es' ? 'English' : 'Español'}
