@@ -53,7 +53,19 @@ const FullScreenSection = ({ title, subtitle, align = 'center', linkTo, onActiva
         >
             {/* Content */}
             {linkTo ? (
-                <Link to={linkTo} style={{ textDecoration: 'none', color: 'inherit', width: '100%', display: 'flex', justifyContent: align === 'left' ? 'flex-start' : align === 'right' ? 'flex-end' : 'center' }}>
+                <Link
+                    to={linkTo}
+                    style={{
+                        textDecoration: 'none',
+                        color: 'inherit',
+                        width: '100%',
+                        display: 'flex',
+                        justifyContent: align === 'left' ? 'flex-start' : align === 'right' ? 'flex-end' : 'center',
+                        transition: 'color 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-primary)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+                >
                     <Content />
                 </Link>
             ) : (
