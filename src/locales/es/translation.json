@@ -14,13 +14,13 @@
         "welcome": "Te damos la bienvenida a Yumpeen.com",
         "subtitle": "Agencia creativa y de acompañamiento digital.",
         "heroTitle": "Impulsa tu presencia digital",
-        "heroSubtitle": "Ayudamos a creadores y negocios a profesionalizar su marca con creatividad e innovación.",
+        "heroSubtitle": "Ayudamos a mentes creativas y negocios a profesionalizar su marca con creatividad e innovación.",
         "cta": "¡Yump!",
         "photoCredit": "Foto de {{author}} en {{source}}"
     },
     "about": {
         "title": "No caminamos, saltamos.",
-        "subtitle": "En un mundo digital saturado, destacar requiere impulso. Nuestra misión es ser un trampolín para creadores y marcas que quieren llegar más alto.",
+        "subtitle": "En un mundo digital saturado, destacar requiere impulso. Nuestra misión es ser un trampolín para mentes creativas y marcas que quieren llegar más alto.",
         "values": {
             "elevation": {
                 "title": "Elevación",
@@ -32,7 +32,7 @@
             },
             "precision": {
                 "title": "Precisión",
-                "desc": "Estrategias guiadas por IA, curadas por humanos. El equilibrio perfecto."
+                "desc": "Estrategias guiadas por IA, curadas por personas. El equilibrio perfecto."
             }
         }
     },
